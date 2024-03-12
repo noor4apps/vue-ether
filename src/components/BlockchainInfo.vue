@@ -20,7 +20,7 @@ export default {
   data() {
     return {
       usdtBalance: 'Loading...',
-      latestBlockNumber: 'Loading...',
+      latestBlockNumber: 0,
       INFURA_API_KEY: '',
       tokenContract: '',
       holderAddress: '',
@@ -38,7 +38,7 @@ export default {
       } catch (error) {
         console.error('Failed to fetch data:', error);
         this.usdtBalance = 'Error fetching USDT balance';
-        this.latestBlockNumber = 'Error fetching latest block number';
+        this.latestBlockNumber = 0;
       }
     },
   },
